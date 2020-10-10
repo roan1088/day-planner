@@ -26,8 +26,21 @@ $.each(businessHoursList, function(index, businessHour) {
         // Add a text area
         var textAreaEl = $('<textarea class="col-10">');
         // Assign past, present or future class based on the time
-        // ???
-        // textAreaEl.addClass("present");
+            // Current hour in 24hr format
+            var hourNow = parseInt(moment().format("H"));
+            // console.log(hourNow);
+            // Hour of this row in 24hr format
+            var rowHour = index + 9;
+            // console.log(rowHour);
+            if (hourNow > rowHour) {
+                textAreaEl.addClass("past");
+            }
+            else if (hourNow < rowHour) {
+                textAreaEl.addClass("future");
+            }
+            else {
+                textAreaEl.addClass("present");
+            }
         textAreaEl.text(agendaList[index]);
         hourRowEl.append(textAreaEl);
         
