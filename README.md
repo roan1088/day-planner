@@ -15,6 +15,8 @@ Note: The save button only saves for that hour. Make sure to save for every hour
 ## Credits
 
 Website used for reference: https://www.w3schools.com/js/default.asp
+
 Documentation for JQuery: https://api.jquery.com/
+
 Documentation for MomentJS: https://momentjs.com/
 
